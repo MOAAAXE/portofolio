@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Code, Smartphone, Globe, Send, ExternalLink, BookOpen, MessageSquare, User, Briefcase, Mail, X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Code, Smartphone, Globe, BookOpen, Briefcase, Mail, X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 // Import foto profil
 import profileImg from './assets/foto/foto-profile.jpeg';
@@ -30,10 +30,10 @@ export default function Portfolio() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const profile = {
-    name: "Daffa Cahyo",
+    name: "Muhamad Daffa Cahyo Santoso",
     role: "Mahasiswa Sistem Informasi",
     university: "Universitas Pamulang",
-    bio: "Mahasiswa Sistem Informasi Universitas Pamulang yang berfokus pada pengembangan aplikasi mobile dan web. Memiliki keahlian dalam membangun antarmuka pengguna interaktif dan integrasi sistem backend/API.",
+    bio: "Saya senang membangun sesuatu yang orang lain bisa langsung pakai, dari aplikasi peminjaman buku sampai sistem kasir restoran. Saya banyak belajar lewat vibe coding, dan menurut saya itu bukan soal jalan pintas, tapi soal cepat paham cara sesuatu bekerja lewat eksperimen langsung.",
     skills: ["Flutter", "Dart", "HTML5", "CSS3", "JavaScript", "REST API", "Bug Hunting", "Git & GitHub"]
   };
 
@@ -97,149 +97,144 @@ export default function Portfolio() {
   };
 
   return (
-    <div className="min-h-screen bg-[#070b19] text-white font-sans selection:bg-cyan-500 selection:text-black relative overflow-hidden">
-      
-      {/* Background Stars & Space Glow Effect */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/30 via-[#070b19] to-[#03050c] pointer-events-none"></div>
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[120px] pointer-events-none"></div>
-      <div className="absolute bottom-10 right-10 w-[300px] h-[300px] bg-indigo-600/10 rounded-full blur-[100px] pointer-events-none"></div>
+    <div className="min-h-screen bg-[#141110] text-white font-sans selection:bg-amber-500 selection:text-black relative overflow-hidden">
+
+      {/* Subtle warm background, no glow blobs */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#241b14] via-[#141110] to-[#0d0b0a] pointer-events-none"></div>
 
       {/* Navigation */}
-      <nav className="relative z-10 border-b border-slate-800/80 backdrop-blur-md bg-[#070b19]/70 sticky top-0 px-6 py-4">
+      <nav className="relative z-10 border-b border-white/10 backdrop-blur-md bg-[#141110]/80 sticky top-0 px-6 py-4">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
-          <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500 tracking-wider">
-            MUHAMAD DAFFA CAHYO SANTOSO
+          <span className="text-lg font-semibold tracking-wide flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-amber-500"></span>
+            Muhamad Daffa Cahyo Santoso
           </span>
-          <div className="flex gap-6 text-sm text-slate-300">
-            <a href="#about" className="hover:text-cyan-400 transition-colors">Tentang</a>
-            <a href="#skills" className="hover:text-cyan-400 transition-colors">Keahlian</a>
-            <a href="#projects" className="hover:text-cyan-400 transition-colors">Portofolio</a>
-            <a href="#contact" className="hover:text-cyan-400 transition-colors">Kontak</a>
+          <div className="flex gap-6 text-sm text-white/60">
+            <a href="#about" className="hover:text-amber-400 transition-colors">Tentang</a>
+            <a href="#skills" className="hover:text-amber-400 transition-colors">Keahlian</a>
+            <a href="#projects" className="hover:text-amber-400 transition-colors">Portofolio</a>
+            <a href="#contact" className="hover:text-amber-400 transition-colors">Kontak</a>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section id="about" className="relative z-10 max-w-6xl mx-auto px-6 py-24 flex flex-col md:flex-row items-center justify-between gap-12">
-        <div className="flex-1 space-y-6">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-300 text-xs tracking-wide">
-            <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+      <section id="about" className="relative z-10 max-w-6xl mx-auto px-6 py-20 md:py-28 flex flex-col md:flex-row items-center justify-between gap-14">
+        <div className="flex-1 space-y-6 flex flex-col items-center text-center">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-amber-500/30 text-amber-400 text-xs tracking-wide uppercase">
             {profile.university}
           </div>
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">
-            Halo, Saya <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400">{profile.name}</span>
+          <h1 className="font-serif text-4xl md:text-5xl font-bold tracking-tight leading-tight">
+            Halo, saya Muhamad Daffa Cahyo Santoso.
           </h1>
-          <p className="text-lg text-slate-300 leading-relaxed max-w-xl">
+          <p className="text-base text-white/70 leading-relaxed max-w-lg">
             {profile.bio}
           </p>
           <div className="flex gap-4 pt-2">
-            <a href="#projects" className="px-6 py-3 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium hover:shadow-lg hover:shadow-cyan-500/25 transition-all">
+            <a href="#projects" className="px-6 py-3 rounded-md bg-amber-500 text-black font-semibold hover:bg-amber-400 transition-all">
               Lihat Project
             </a>
-            <a href="#contact" className="px-6 py-3 rounded-lg border border-slate-700 bg-slate-900/50 hover:bg-slate-800 text-slate-200 transition-all">
+            <a href="#contact" className="px-6 py-3 rounded-md border border-white/20 hover:border-amber-500/60 text-white/80 hover:text-white transition-all">
               Hubungi Saya
             </a>
           </div>
         </div>
 
-        {/* Profile Avatar Card */}
-        <div className="relative group">
-          <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-indigo-500 rounded-2xl blur opacity-30 group-hover:opacity-75 transition duration-500"></div>
-          <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col items-center justify-center p-6 text-center shadow-2xl">
-            <div className="w-28 h-28 rounded-full overflow-hidden border-4 border-cyan-500/50 shadow-lg mb-4">
-              <img 
-                src={profileImg} 
-                alt={profile.name}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <h3 className="text-xl font-bold text-white">{profile.name}</h3>
-            <p className="text-sm text-cyan-400 mt-1">{profile.role}</p>
-            <p className="text-xs text-slate-400 mt-2">{profile.university}</p>
+        {/* Foto profil - sedikit miring, tidak simetris sempurna */}
+        <div className="relative flex-shrink-0">
+          <div className="w-56 h-72 md:w-64 md:h-80 rounded-lg overflow-hidden border border-white/10 shadow-2xl -rotate-2 hover:rotate-0 transition-transform duration-500">
+            <img 
+              src={profileImg} 
+              alt={profile.name}
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="absolute -bottom-4 -left-4 bg-[#1c1714] border border-white/10 rounded-md px-4 py-2 text-xs text-white/70 shadow-lg">
+            {profile.role}
           </div>
         </div>
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="relative z-10 max-w-6xl mx-auto px-6 py-16 border-t border-slate-800/60">
-        <h2 className="text-2xl font-bold mb-8 flex items-center gap-3">
-          <Code className="text-cyan-400" /> Keahlian Utama
+      <section id="skills" className="relative z-10 max-w-6xl mx-auto px-6 py-14 border-t border-white/10">
+        <h2 className="font-serif text-xl font-bold mb-6 flex items-center gap-3 text-white/90">
+          <Code size={18} className="text-amber-500" /> Yang saya kuasai
         </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+        <div className="flex flex-wrap gap-2.5">
           {profile.skills.map((skill, index) => (
-            <div key={index} className="p-4 rounded-xl border border-slate-800 bg-slate-900/40 hover:border-cyan-500/50 hover:bg-slate-900/80 transition-all text-center">
-              <span className="text-slate-200 font-medium">{skill}</span>
-            </div>
+            <span key={index} className="px-4 py-2 rounded-md border border-white/10 bg-white/[0.03] hover:border-amber-500/40 hover:bg-white/[0.06] transition-all text-sm text-white/80">
+              {skill}
+            </span>
           ))}
         </div>
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="relative z-10 max-w-6xl mx-auto px-6 py-16 border-t border-slate-800/60">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-4">
+      <section id="projects" className="relative z-10 max-w-6xl mx-auto px-6 py-14 border-t border-white/10">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 gap-4">
           <div>
-            <h2 className="text-2xl font-bold flex items-center gap-3">
-              <Briefcase className="text-cyan-400" /> Portofolio Project
+            <h2 className="font-serif text-xl font-bold flex items-center gap-3 text-white/90">
+              <Briefcase size={18} className="text-amber-500" /> Beberapa hal yang sudah saya buat
             </h2>
-            <p className="text-slate-400 text-sm mt-1">Beberapa aplikasi dan integrasi sistem yang telah saya kembangkan.</p>
+            <p className="text-white/50 text-sm mt-1">Klik salah satu untuk lihat tampilannya lebih dekat.</p>
           </div>
-          
+
           {/* Filter Tabs */}
-          <div className="flex bg-slate-900/80 border border-slate-800 p-1 rounded-lg text-xs">
+          <div className="flex border border-white/10 p-1 rounded-md text-xs">
             <button 
               onClick={() => setActiveTab('all')}
-              className={`px-4 py-2 rounded-md transition-all ${activeTab === 'all' ? 'bg-cyan-500 text-black font-semibold' : 'text-slate-400 hover:text-white'}`}>
+              className={`px-4 py-2 rounded transition-all ${activeTab === 'all' ? 'bg-amber-500 text-black font-semibold' : 'text-white/50 hover:text-white'}`}>
               Semua
             </button>
             <button 
               onClick={() => setActiveTab('mobile')}
-              className={`px-4 py-2 rounded-md transition-all ${activeTab === 'mobile' ? 'bg-cyan-500 text-black font-semibold' : 'text-slate-400 hover:text-white'}`}>
+              className={`px-4 py-2 rounded transition-all ${activeTab === 'mobile' ? 'bg-amber-500 text-black font-semibold' : 'text-white/50 hover:text-white'}`}>
               Mobile App
             </button>
             <button 
               onClick={() => setActiveTab('web')}
-              className={`px-4 py-2 rounded-md transition-all ${activeTab === 'web' ? 'bg-cyan-500 text-black font-semibold' : 'text-slate-400 hover:text-white'}`}>
-              Web & API & Bug Hunting
+              className={`px-4 py-2 rounded transition-all ${activeTab === 'web' ? 'bg-amber-500 text-black font-semibold' : 'text-white/50 hover:text-white'}`}>
+              Bug Hunter
             </button>
           </div>
         </div>
 
-        {/* Project Cards */}
-        <div className="grid md:grid-cols-2 gap-8">
-          {filteredProjects.map((project) => (
+        {/* Project Cards - sedikit variasi ukuran */}
+        <div className="grid md:grid-cols-2 gap-6">
+          {filteredProjects.map((project, idx) => (
             <div 
               key={project.id} 
               onClick={() => openGallery(project)}
-              className="cursor-pointer rounded-2xl border border-slate-800 bg-slate-900/50 p-6 flex flex-col justify-between hover:border-cyan-500/40 transition-all hover:shadow-xl hover:shadow-cyan-500/5 hover:-translate-y-1">
+              className={`cursor-pointer rounded-lg border border-white/10 bg-white/[0.02] p-6 flex flex-col justify-between hover:border-amber-500/40 hover:bg-white/[0.04] transition-all ${idx === 0 ? 'md:col-span-2' : ''}`}>
               <div>
                 <div className="flex justify-between items-start mb-4">
-                  <span className="p-2 rounded-lg bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
-                    {project.category === 'mobile' ? <Smartphone size={20} /> : <Globe size={20} />}
+                  <span className="p-2 rounded-md bg-amber-500/10 text-amber-400 border border-amber-500/20">
+                    {project.category === 'mobile' ? <Smartphone size={18} /> : <Globe size={18} />}
                   </span>
                   {project.images && project.images.length > 0 && (
-                    <span className="text-xs text-slate-400 flex items-center gap-1">
-                      {project.images.length} Foto
+                    <span className="text-xs text-white/40">
+                      {project.images.length} foto
                     </span>
                   )}
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
-                <p className="text-slate-300 text-sm leading-relaxed mb-4">{project.description}</p>
-                
-                <div className="space-y-2 mb-6">
-                  <h4 className="text-xs uppercase tracking-wider text-slate-400 font-semibold">Fitur Utama:</h4>
-                  <ul className="text-xs text-slate-300 space-y-1">
+                <h3 className="text-lg font-bold text-white mb-2">{project.title}</h3>
+                <p className="text-white/60 text-sm leading-relaxed mb-4">{project.description}</p>
+
+                <div className="space-y-1.5 mb-6">
+                  <h4 className="text-xs uppercase tracking-wider text-white/40 font-semibold">Fitur utama</h4>
+                  <ul className="text-xs text-white/60 space-y-1">
                     {project.highlights.map((h, i) => (
                       <li key={i} className="flex items-center gap-2">
-                        <span className="w-1 h-1 rounded-full bg-cyan-400"></span> {h}
+                        <span className="w-1 h-1 rounded-full bg-amber-500"></span> {h}
                       </li>
                     ))}
                   </ul>
                 </div>
               </div>
 
-              <div className="flex flex-wrap gap-2 pt-4 border-t border-slate-800/80">
+              <div className="flex flex-wrap gap-2 pt-4 border-t border-white/10">
                 {project.tech.map((t, i) => (
-                  <span key={i} className="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-cyan-300 border border-slate-700/50">
+                  <span key={i} className="text-xs px-2.5 py-1 rounded border border-white/10 text-white/60">
                     {t}
                   </span>
                 ))}
@@ -249,27 +244,27 @@ export default function Portfolio() {
         </div>
       </section>
 
-    {/* Contact Section */}
-<section id="contact" className="relative z-10 max-w-6xl mx-auto px-6 py-20 border-t border-slate-800/60">
+     {/* Contact Section */}
+<section id="contact" className="relative z-10 max-w-6xl mx-auto px-6 py-20 border-t border-white/10">
   <div className="max-w-xl mx-auto text-center space-y-4">
-    <h2 className="text-3xl font-bold">Mari Bekerja Sama</h2>
-    <p className="text-slate-300 text-sm">
+    <h2 className="font-serif text-2xl font-bold">Ada yang bisa dikerjakan bareng?</h2>
+    <p className="text-white/60 text-sm">
       Saya terbuka untuk kesempatan magang, proyek lepas, atau kolaborasi pengembangan perangkat lunak.
     </p>
     <div className="pt-4 flex flex-col items-center gap-3">
       <div className="flex flex-wrap justify-center gap-3">
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=daffacahyo1@gmail.com&su=Halo%2C%20Saya%20Ingin%20Berkolaborasi" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-cyan-500 text-cyan-400 font-semibold hover:bg-cyan-500/10 transition-all">
-          Kirim Email
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=daffacahyo1@gmail.com&su=Halo%2C%20Saya%20Ingin%20Berkolaborasi" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-amber-500 text-black font-semibold hover:bg-amber-400 transition-all">
+          <Mail size={18} /> Kirim Email
         </a>
       </div>
-      <p className="text-slate-400 text-sm">daffacahyo1@gmail.com</p>
+      <p className="text-white/40 text-sm">daffacahyo1@gmail.com</p>
     </div>
   </div>
 </section>
 
       {/* Footer */}
-      <footer className="relative z-10 border-t border-slate-800/80 text-center py-6 text-xs text-slate-400">
-        © 2026 Daffa Cahyo. Dibuat dengan React.js & Tailwind CSS.
+      <footer className="relative z-10 border-t border-white/10 text-center py-6 text-xs text-white/40">
+        © 2026 Daffa Cahyo.
       </footer>
 
       {/* Gallery Modal */}
@@ -284,14 +279,14 @@ export default function Portfolio() {
           >
             <button
               onClick={closeGallery}
-              className="absolute -top-12 right-0 md:top-0 md:-right-12 text-white hover:text-cyan-400 transition-colors p-2"
+              className="absolute -top-12 right-0 md:top-0 md:-right-12 text-white hover:text-amber-400 transition-colors p-2"
             >
               <X size={28} />
             </button>
 
             <div className="text-center mb-4">
               <h3 className="text-lg font-bold text-white">{selectedProject.title}</h3>
-              <p className="text-xs text-slate-400 mt-1">
+              <p className="text-xs text-white/40 mt-1">
                 {currentImageIndex + 1} / {selectedProject.images.length}
               </p>
             </div>
@@ -300,7 +295,7 @@ export default function Portfolio() {
               {selectedProject.images.length > 1 && (
                 <button
                   onClick={prevImage}
-                  className="absolute left-0 -translate-x-2 md:-translate-x-12 z-10 p-2 rounded-full bg-slate-900/80 border border-slate-700 hover:bg-cyan-500 hover:text-black text-white transition-all"
+                  className="absolute left-0 -translate-x-2 md:-translate-x-12 z-10 p-2 rounded-full bg-[#1c1714] border border-white/10 hover:bg-amber-500 hover:text-black text-white transition-all"
                 >
                   <ChevronLeft size={22} />
                 </button>
@@ -309,13 +304,13 @@ export default function Portfolio() {
               <img
                 src={selectedProject.images[currentImageIndex]}
                 alt={`${selectedProject.title} - ${currentImageIndex + 1}`}
-                className="max-h-[70vh] w-auto rounded-xl border border-slate-800 shadow-2xl object-contain"
+                className="max-h-[70vh] w-auto rounded-lg border border-white/10 shadow-2xl object-contain"
               />
 
               {selectedProject.images.length > 1 && (
                 <button
                   onClick={nextImage}
-                  className="absolute right-0 translate-x-2 md:translate-x-12 z-10 p-2 rounded-full bg-slate-900/80 border border-slate-700 hover:bg-cyan-500 hover:text-black text-white transition-all"
+                  className="absolute right-0 translate-x-2 md:translate-x-12 z-10 p-2 rounded-full bg-[#1c1714] border border-white/10 hover:bg-amber-500 hover:text-black text-white transition-all"
                 >
                   <ChevronRight size={22} />
                 </button>
@@ -328,8 +323,8 @@ export default function Portfolio() {
                   <button
                     key={i}
                     onClick={() => setCurrentImageIndex(i)}
-                    className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-all ${
-                      i === currentImageIndex ? 'border-cyan-400' : 'border-slate-700 opacity-60 hover:opacity-100'
+                    className={`flex-shrink-0 w-16 h-16 rounded-md overflow-hidden border-2 transition-all ${
+                      i === currentImageIndex ? 'border-amber-400' : 'border-white/10 opacity-60 hover:opacity-100'
                     }`}
                   >
                     <img src={img} alt={`thumb-${i}`} className="w-full h-full object-cover" />
