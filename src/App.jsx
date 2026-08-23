@@ -220,7 +220,7 @@ export default function Portfolio() {
       id: 1,
       category: "mobile",
       title: "Aplikasi Mobile Peminjaman Buku Online",
-      tech: ["Flutter", "Dart", "UI/UX Design"],
+      tech: ["Flutter", "Dart", "UI/UX Design", "Firebase"],
       description: "Aplikasi peminjaman buku berbasis mobile dengan fitur autentikasi pengguna, pengajuan pinjaman dinamis, manajemen jadwal pengembalian, dan riwayat akun.",
       highlights: ["Layar Dashboard & Autentikasi", "Form Peminjaman & Fasilitas Tambahan", "Manajemen Profil Pengguna"],
       images: [pinjamBuku0, pinjamBuku1, pinjamBuku2, pinjamBuku3, pinjamBuku4, pinjamBuku5]
@@ -718,7 +718,7 @@ export default function Portfolio() {
       {/* Contact Section */}
       <section id="contact" className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20 border-t border-white/10">
         <Reveal className="max-w-xl mx-auto text-center space-y-4">
-          <h2 className="font-serif text-white text-xl sm:text-2xl font-bold">Ada yang bisa dikerjakan bareng?</h2>
+          <h2 className="font-serif text-white text-xl sm:text-2xl font-bold">Ada yang bisa dikerjakan bersama?</h2>
           <p className="text-white/55 text-sm">
             Saya terbuka untuk kesempatan magang, proyek lepas, atau kolaborasi pengembangan perangkat lunak.
           </p>
@@ -740,7 +740,7 @@ export default function Portfolio() {
 
       {/* Footer */}
       <footer className="relative z-10 border-t border-white/10 text-center py-6 text-xs text-white/35">
-        © 2026 Daffa Cahyo.
+        © 2026 Daffa Cahyo. Dibuat dengan React.js dan Tailwind CSS.
       </footer>
 
       {/* Back to top */}
